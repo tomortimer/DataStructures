@@ -72,6 +72,20 @@ namespace DataStructures
             return index + 1;
         }
 
+        public bool isFull()
+        {
+            bool full = false;
+            if((index + 1) == stack.Length) { full = true; }
+            return full;
+        }
+
+        public bool isEmpty()
+        {
+            bool empty = false;
+            if(index == -1) { empty = true; }
+            return empty;
+        }
+
         //returns top item without changing stack
         public T Peek()
         {

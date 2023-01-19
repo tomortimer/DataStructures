@@ -62,5 +62,15 @@ namespace DataStructures
         {
             return stack.Count;
         }
+
+        public bool isEmpty()
+        {
+            bool empty = false;
+            if (stack.Count == 0)
+            {
+                empty = true;
+            }
+            return empty;
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace DataStructures
     {
         //using a List as the queue
         private List<T> queue = new List<T>();
-        private bool isEmpty = true;
+        private bool empty = true;
         private int startPtr = 0;
         //endPtr is always one more than index of last element, therefore if start and end are same, queue is empty
         private int endPtr = 0;
@@ -39,7 +39,7 @@ namespace DataStructures
             //default value for T will be returned if the queue is empty to avoid errors
             T ret = default;
             checkEmpty();
-            if(!isEmpty)
+            if(!empty)
             {
                 //takes first item in the queue then moves pointer forward
                 ret = queue[startPtr];
@@ -53,7 +53,7 @@ namespace DataStructures
             //default value for T in case queue is empty
             T ret = default;
             checkEmpty();
-            if (!isEmpty)
+            if (!empty)
             {
                 //takes first item in queue BUT DOES NOT CHANGE POINTER
                 ret = queue[startPtr];
@@ -93,12 +93,18 @@ namespace DataStructures
             //see comment in variables for pointer logic
             if(startPtr == endPtr)
             {
-                isEmpty = true;
+                empty = true;
             }
             else
             {
-                isEmpty = false;
+                empty = false;
             }
+        }
+
+        public bool isEmpty()
+        {
+            checkEmpty();
+            return empty;
         }
 
     }

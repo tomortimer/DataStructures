@@ -98,6 +98,20 @@ namespace DataStructures
             return itemCtr;
         }
 
+        public bool isFull()
+        {
+            bool full = false;
+            if(size == itemCtr) { full = true; }
+            return full;
+        }
+
+        public bool isEmpty()
+        {
+            bool empty = false;
+            if(itemCtr == 0) { empty = true; }
+            return empty;
+        }
+
         public bool Contains(T inp)
         {
             bool cont = false;
