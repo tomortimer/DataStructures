@@ -10,6 +10,7 @@ namespace DataStructures
             //limitedQueueTest();
             //stackTest();
             //limitedStackTest();
+            listTest();
         }
 
         static void queueTest()
@@ -92,6 +93,8 @@ namespace DataStructures
             s.Push(4);
             s.Push(5);
             s.Push(6);
+            s.Push(7);
+            s.Push(8);
             Console.WriteLine("Count: " + s.Count());
             Console.WriteLine("Peek: " + s.Peek());
             Console.WriteLine("Pop: " + s.Pop());
@@ -105,6 +108,20 @@ namespace DataStructures
             Console.WriteLine("Pop: " + s.Pop());
             Console.WriteLine("Count: " + s.Count());
             Console.WriteLine("Contains 3: " + s.Contains(3));
+        }
+
+        static void listTest()
+        {
+            LList<int> L = new LList<int>();
+            Console.WriteLine("Count " + L.Count());
+            L.Add(1);
+            L.Add(2);
+            L[1] = 7382952;
+            L.Add(3);
+            Console.WriteLine(L[0]);
+            Console.WriteLine(L[1]);
+            Console.WriteLine(L[2]);
+            Console.WriteLine("Count " + L.Count());
         }
     }
 }

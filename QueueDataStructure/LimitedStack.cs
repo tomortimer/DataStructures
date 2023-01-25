@@ -44,7 +44,7 @@ namespace DataStructures
             bool success = false;
             int targetInd = index + 1;
             //checks to see if target index for push exceeds stack size
-            if(targetInd <= stack.Length)
+            if(targetInd < stack.Length)
             {
                 stack[targetInd] = inp;
                 //increments index of top item in a successful push
