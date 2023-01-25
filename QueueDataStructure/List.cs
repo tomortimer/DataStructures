@@ -77,7 +77,7 @@ namespace DataStructures
         //recursive, looks a bit messy but it's built on the Length method so it's alright really
         private int Search(ListNode<T> node, T inp)
         {
-            //is node != null list is empty as this method is only called in Count with an input
+            //if node == null list is empty or somehow got out of bounds or is missing a node, most normally an empty list or the end of one so returns 0
             if (node != null)
             {
                 if (node.next != null)
