@@ -63,6 +63,7 @@ namespace DataStructures
             tmp.SetData(inp);
         }
 
+        //wanted to have these two options for count but functionality's different, so:
         public int Count()
         {
             return Length(head);
@@ -73,6 +74,7 @@ namespace DataStructures
             return Search(head, inp);
         }
 
+        //recursive, looks a bit messy but it's built on the Length method so it's alright really
         private int Search(ListNode<T> node, T inp)
         {
             //is node != null list is empty as this method is only called in Count with an input
@@ -100,6 +102,7 @@ namespace DataStructures
             else { return 0; }
         }
 
+        //this could also be done with while but seems like clean recursion so I'll leave it in :)
         private int Length(ListNode<T> node)
         {
             //if node == null, the list is empty as this is a private method and only called by count without input
