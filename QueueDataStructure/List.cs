@@ -63,6 +63,12 @@ namespace DataStructures
             tmp.SetData(inp);
         }
 
+        public T RemoveAt(int i) 
+        {
+            ListNode<T> tmp = head;
+
+        }
+
         //wanted to have these two options for count but functionality's different, so:
         public int Count()
         {
@@ -105,18 +111,10 @@ namespace DataStructures
         //this could also be done with while but seems like clean recursion so I'll leave it in :)
         private int Length(ListNode<T> node)
         {
-            //if node == null, the list is empty as this is a private method and only called by count without input
+            //if node == null, the list is empty
             if (node != null)
             {
-                //when node.next (pointer) == null we have reached the end of the list and the recursion unspools
-                if (node.next != null)
-                {
-                    return 1 + Length(node.next);
-                }
-                else
-                {
-                    return 1;
-                }
+                return 1 + Length(node.next);
             }
             else { return 0; }
         }
