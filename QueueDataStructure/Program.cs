@@ -10,7 +10,7 @@ namespace DataStructures
             //limitedQueueTest();
             //stackTest();
             //limitedStackTest();
-            listTest();
+            //listTest();
         }
 
         static void queueTest()
