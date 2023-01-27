@@ -116,11 +116,15 @@ namespace DataStructures
             Console.WriteLine("Count " + L.Count());
             L.Add(1);
             L.Add(2);
-            L[1] = 7382952;
+            L[0] = 7382952;
             L.Add(3);
+            L.Add(4);
+            L.Add(5);
+            L.RemoveAt(0);
             Console.WriteLine(L[0]);
             Console.WriteLine(L[1]);
             Console.WriteLine(L[2]);
+            Console.WriteLine(L[3]);
             Console.WriteLine("Count " + L.Count());
         }
     }
