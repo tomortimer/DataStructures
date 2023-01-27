@@ -11,6 +11,7 @@ namespace DataStructures
             //stackTest();
             //limitedStackTest();
             //listTest();
+            doubleLinkedListTest();
         }
 
         static void queueTest()
@@ -127,6 +128,24 @@ namespace DataStructures
             Console.WriteLine(L[3]);
             Console.WriteLine(L[4]);
             Console.WriteLine(L[5]);
+            Console.WriteLine("Count " + L.Count());
+        }
+
+        static void doubleLinkedListTest()
+        {
+            DoubleLinkedList<int> L = new DoubleLinkedList<int>();
+            Console.WriteLine("Count " + L.Count());
+            L.Add(1);
+            L.Add(2);
+            L.Add(3);
+            Console.WriteLine("Count " + L.Count());
+            L.Add(4);
+            L.Add(5);
+            Console.WriteLine(L.RemoveAt(4) + " removed");
+            Console.WriteLine(L[0]);
+            Console.WriteLine(L[1]);
+            Console.WriteLine(L[2]);
+            Console.WriteLine(L[3]);
             Console.WriteLine("Count " + L.Count());
         }
     }

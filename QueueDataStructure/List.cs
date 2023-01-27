@@ -37,6 +37,7 @@ namespace DataStructures
         //private method for retrieving data, adjusted to use while loops like SetAt()
         private T RetrieveAt(int i, ListNode<T> node)
         {
+            if (i < 0) { throw new IndexOutOfRangeException(); }
             ListNode<T> tmp = node;
             while(i > 0)
             {
@@ -51,6 +52,7 @@ namespace DataStructures
         //private set method - didn't work when recursive so need to fix this to work with while I think - it may have work recursively but I just didn't put the method in the indexer... oh well, while is probably safer
         private void SetAt(int i, ListNode<T> node, T inp)
         {
+            if(i < 0) { throw new IndexOutOfRangeException(); }
             ListNode<T> tmp = node;
             //runs while i >= 0, fine to do this here since using ints
             while(i > 0)
