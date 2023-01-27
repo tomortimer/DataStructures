@@ -120,11 +120,13 @@ namespace DataStructures
             L.Add(3);
             L.Add(4);
             L.Add(5);
-            L.RemoveAt(0);
+            L.Insert(3, 990);
             Console.WriteLine(L[0]);
             Console.WriteLine(L[1]);
             Console.WriteLine(L[2]);
             Console.WriteLine(L[3]);
+            Console.WriteLine(L[4]);
+            Console.WriteLine(L[5]);
             Console.WriteLine("Count " + L.Count());
         }
     }

@@ -69,7 +69,7 @@ namespace DataStructures
             T ret = default;
             if(i == 0)
             {
-                if(tmp == null) { throw new IndexOutOfRangeException(); }
+                if(tmp == null) { throw new ArgumentOutOfRangeException(); }
                 //funny :)
                 ret = head.GetData();
                 head = tmp.next;
@@ -81,11 +81,11 @@ namespace DataStructures
                 while (i > 0)
                 {
                     //if tmp is empty that means index is out of bounds
-                    if (tmp == null) { throw new IndexOutOfRangeException(); }
+                    if (tmp == null) { throw new ArgumentOutOfRangeException(); }
                     tmp = tmp.next;
                     i--;
                     //funny >:)
-                    if(tmp.next == null) { throw new IndexOutOfRangeException(); }
+                    if(tmp.next == null) { throw new ArgumentOutOfRangeException(); }
                 }
                 //less funny (dereferences next node and sets reference to next node over)
                 ret = tmp.next.GetData();
@@ -152,6 +152,32 @@ namespace DataStructures
             //points new node towards current head so it isn't lost when head now points at our new node
             a.next = head;
             head = a;
+        }
+
+        public void Insert(int i, T inp)
+        {
+            if(i < 0 || i > this.Count()) { throw new ArgumentOutOfRangeException(); }
+
+            //needs to handle insert at 0 differently BECAUSE SOMEONE WOULD DEFINITELY DO THAT
+            if(i == 0)
+            {
+                this.AddFront(inp);
+            }
+            else
+            {
+                //needs to get node before where to insert
+                i--;
+                ListNode<T> tmp = head;
+                while (i > 0)
+                {
+                    tmp = tmp.next;
+                    i--;
+                }
+                //swaps things around without accidentally derefencing
+                ListNode<T> n = new ListNode<T>(inp);
+                n.next = tmp.next;
+                tmp.next = n;
+            }
         }
 
     }
