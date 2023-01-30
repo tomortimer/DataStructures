@@ -78,10 +78,13 @@ namespace DataStructures
         public int Count(T inp)
         {
             DoubleLinkedNode<T> tmp = head;
-            while(tmp.next != null)
+            int ctr = 0;
+            while(tmp != null)
             {
-
+                if (head.GetData().Equals(inp)) { ctr++; }
+                tmp = tmp.next;
             }
+            return ctr;
         }
 
         private int Length(DoubleLinkedNode<T> node)
@@ -143,6 +146,11 @@ namespace DataStructures
             }
 
             return ret;
+        }
+
+        public void InsertAt(T inp, int i)
+        {
+
         }
     }
 }

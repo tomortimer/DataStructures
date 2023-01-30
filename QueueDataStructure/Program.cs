@@ -8,10 +8,10 @@ namespace DataStructures
         {
             //queueTest();
             //limitedQueueTest();
-            //stackTest();
+            stackTest();
             //limitedStackTest();
             //listTest();
-            doubleLinkedListTest();
+            //doubleLinkedListTest();
         }
 
         static void queueTest()
@@ -63,13 +63,8 @@ namespace DataStructures
 
         static void stackTest()
         {
-            Stack<int> s = new Stack<int>();
-            s.Push(1);
-            s.Push(2);
-            s.Push(3);
-            s.Push(4);
-            s.Push(5);
-            s.Push(6);
+            int[] i = { 1, 2, 3, 4, 5 , 6};
+            Stack<int> s = new Stack<int>(i);
             Console.WriteLine("Count: " + s.Count());
             Console.WriteLine("Peek: " + s.Peek());
             Console.WriteLine("Pop: " + s.Pop());
@@ -136,12 +131,13 @@ namespace DataStructures
             DoubleLinkedList<int> L = new DoubleLinkedList<int>();
             Console.WriteLine("Count " + L.Count());
             L.Add(1);
-            L.Add(2);
-            L.Add(3);
+            L.Add(1);
+            L.Add(1);
             Console.WriteLine("Count " + L.Count());
-            L.Add(4);
-            L.Add(5);
+            L.Add(1);
+            L.Add(1);
             Console.WriteLine(L.RemoveAt(4) + " removed");
+            Console.WriteLine("Count 1 = " + L.Count(1));
             Console.WriteLine(L[0]);
             Console.WriteLine(L[1]);
             Console.WriteLine(L[2]);
