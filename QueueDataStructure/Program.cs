@@ -108,7 +108,7 @@ namespace DataStructures
 
         static void listTest()
         {
-            LList<int> L = new LList<int>();
+            List<int> L = new List<int>();
             Console.WriteLine("Count " + L.Count());
             L.Add(1);
             L.Add(2);
