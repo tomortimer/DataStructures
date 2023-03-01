@@ -31,9 +31,9 @@ namespace DataStructures
         {
             T ret = default;
             //checks stack isn't empty
-            if(stack.Count > 0)
+            if(stack.Count() > 0)
             {
-                ret = stack[stack.Count - 1];
+                ret = stack[stack.Count() - 1];
             }
             return ret;
         }

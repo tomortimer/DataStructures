@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DataStructures
 {
@@ -8,10 +9,47 @@ namespace DataStructures
         {
             //queueTest();
             //limitedQueueTest();
-            stackTest();
+            //stackTest();
             //limitedStackTest();
             //listTest();
             //doubleLinkedListTest();
+            graphTest();
+        }
+
+        static void graphTest()
+        {
+            Dictionary<string, Dictionary<string, int>> adj = new Dictionary<string, Dictionary<string, int>>();
+
+            //A BC DEFG binary tree but storing in graph for easy testing
+            //distances don't really mattter
+            Dictionary<string, int> adjA = new Dictionary<string, int>();
+            adjA.Add("B", 0);
+            adjA.Add("C", 0);
+
+            Dictionary<string, int> adjB = new Dictionary<string, int>();
+            adjB.Add("D", 0);
+            adjB.Add("E", 0);
+
+            Dictionary<string, int> adjC = new Dictionary<string, int>();
+            adjC.Add("F", 0);
+            adjC.Add("G", 0);
+
+            //empty matrices for end nodes
+            Dictionary<string, int> adjD = new Dictionary<string, int>();
+            Dictionary<string, int> adjE = new Dictionary<string, int>();
+            Dictionary<string, int> adjF = new Dictionary<string, int>();
+            Dictionary<string, int> adjG = new Dictionary<string, int>();
+
+            adj.Add("A", adjA);
+            adj.Add("B", adjB);
+            adj.Add("C", adjC);
+            adj.Add("D", adjD);
+            adj.Add("E", adjE);
+            adj.Add("F", adjF);
+            adj.Add("G", adjG);
+
+            Graph<string> graph = new Graph<string>(adj, "A");
+            graph.depthsFirstSearch();
         }
 
         static void queueTest()

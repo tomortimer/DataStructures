@@ -108,6 +108,18 @@ namespace DataStructures
             return Search(head, inp);
         }
 
+        public bool Contains(T inp)
+        {
+            //checks if it contains a thingy
+            // :)
+            bool ret = false;
+            if (this.Count(inp) > 0)
+            {
+                ret = true;
+            }
+            return ret;
+        }
+
         //recursive, looks a bit messy but it's built on the Length method so it's alright really
         private int Search(ListNode<T> node, T inp)
         {
