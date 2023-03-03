@@ -2,7 +2,7 @@
 
 namespace DataStructures
 {
-    class List<T>
+    class LList<T>
     {
         //head node poiting to nothing by default
         private ListNode<T> head = null;

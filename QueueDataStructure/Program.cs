@@ -49,7 +49,8 @@ namespace DataStructures
             adj.Add("G", adjG);
 
             Graph<string> graph = new Graph<string>(adj, "A");
-            graph.depthsFirstSearch();
+            //graph.depthsFirstSearch();
+            graph.dijsktra("G", "C");
         }
 
         static void queueTest()
@@ -147,7 +148,7 @@ namespace DataStructures
         static void listTest()
         {
             List<int> L = new List<int>();
-            Console.WriteLine("Count " + L.Count());
+            Console.WriteLine("Count " + L.Count);
             L.Add(1);
             L.Add(2);
             L[0] = 7382952;
@@ -161,7 +162,7 @@ namespace DataStructures
             Console.WriteLine(L[3]);
             Console.WriteLine(L[4]);
             Console.WriteLine(L[5]);
-            Console.WriteLine("Count " + L.Count());
+            Console.WriteLine("Count " + L.Count);
         }
 
         static void doubleLinkedListTest()

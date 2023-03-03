@@ -31,9 +31,9 @@ namespace DataStructures
         {
             T ret = default;
             //checks stack isn't empty
-            if(stack.Count() > 0)
+            if(stack.Count > 0)
             {
-                ret = stack[stack.Count() - 1];
+                ret = stack[stack.Count - 1];
             }
             return ret;
         }
@@ -43,10 +43,10 @@ namespace DataStructures
         {
             T ret = default;
             //checks stack isn't empty
-            if(stack.Count() > 0)
+            if(stack.Count > 0)
             {
-                ret = stack[stack.Count() - 1];
-                stack.RemoveAt(stack.Count() - 1);
+                ret = stack[stack.Count - 1];
+                stack.RemoveAt(stack.Count - 1);
             }
             return ret;
         }
@@ -60,13 +60,13 @@ namespace DataStructures
         //returns number of items in the stack
         public int Count()
         {
-            return stack.Count();
+            return stack.Count;
         }
 
         public bool isEmpty()
         {
             bool empty = false;
-            if (stack.Count() == 0)
+            if (stack.Count == 0)
             {
                 empty = true;
             }
